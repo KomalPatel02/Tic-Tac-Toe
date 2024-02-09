@@ -7,3 +7,10 @@ function closePlayerConfig() {
   playerConfigOverlayElement.style.display = "none";
   backdropElement.style.display = "none";
 }
+
+function savePlayerConfig() {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const enteredplayername = formData.get("playername");
+  console.log(enteredplayername);
+}
